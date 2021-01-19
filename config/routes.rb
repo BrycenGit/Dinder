@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'matches/index'
+  
   root to: 'home#index'
-
+  get 'matches/index'
   devise_for :users
   resources :users, only: [:show, :friends] 
   
